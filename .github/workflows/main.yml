@@ -1,4 +1,4 @@
-- name: Python Installed Demo
+name: Python Installed Demo
 
 on:
   workflow_dispatch:
