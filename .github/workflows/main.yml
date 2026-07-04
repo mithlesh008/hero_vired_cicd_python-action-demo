@@ -1,0 +1,22 @@
+- name: Python Installed Demo
+
+on:
+  workflow_dispatch:
+
+jobs: 
+  python_demo:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Install Python Runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: check python version
+        run: python --version
+        
+      - name: Run the code
+        run: python app.py
